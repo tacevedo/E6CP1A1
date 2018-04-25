@@ -1,8 +1,13 @@
-# Permitir que el usuario pueda ingresar la contraseña por teclado 
+# Permitir que el usuario pueda ingresar la contraseña por teclado
 # para que se cumpla la condición.
+password = ''
+until password == 'secreto'
+  puts 'Ingrese password'
+  password = gets.chomp
+  if password == 'secreto'
+    puts 'Acceso PERMITIDO! :)'
+  else
+    puts 'Acceso DENEGADO! :('
+  end
 
-if password == 'secreto'
-  puts 'Acceso PERMITIDO! :)'
-else
-  puts 'Acceso DENEGADO! :('
 end
