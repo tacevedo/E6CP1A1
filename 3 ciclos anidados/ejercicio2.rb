@@ -24,41 +24,14 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
-
-
-
-b = "<table> \n \t <tbody> \n"
-6.times do |i|
-
-  if i == 0
-    b += " \t \t<tr>\n"
-  elsif i ==5
-    b += " \t \t</tr>\n"
-  else
-    b += "\t \t\t <td>" + i.to_s + "</td> \n"
+print "<table> \n \t <tbody> \n"
+a = 1
+3.times do
+  print " \t \t<tr>\n"
+  4.times do
+      print "\t \t\t <td>" + a.to_s + "</td> \n"
+      a += 1
   end
+  print " \t \t</tr>\n"
 end
-
-6.times do |i|
-  i += 4
-  if i == 4
-    b += " \t \t<tr>\n"
-  elsif i == 9
-    b += " \t \t</tr>\n"
-  else
-    b += "\t \t\t <td>" + i.to_s + "</td> \n"
-  end
-end
-
-5.times do |i|
-  i += 8
-  if i == 8
-    b += " \t \t<tr>\n"
-  elsif i == 13
-    b += " \t \t</tr>\n"
-  else
-    b += "\t \t\t <td>" + i.to_s + "</td> \n"
-  end
-end
-b += "\t\t </tr> \n\t </tbody> \n </table>"
-puts b
+print "\t </tbody> \n </table> \n"
