@@ -8,6 +8,21 @@ Se pide imprimir la secuencia numérica, de la siguiente forma:
 
 4.times do |i|
   i += 1
+  4.times do |j|
+    j += 1
+    result = i * j
+    if j ==4
+      puts result
+    else
+      print "#{result} \t"
+    end
+  end
+  puts ''
+end
+
+=begin
+4.times do |i|
+  i += 1
   if i ==4
     puts i
   else
@@ -52,3 +67,4 @@ var3 = 4
     print "#{var3} \t"
   end
 end
+=end
